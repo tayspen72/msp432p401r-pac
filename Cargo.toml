@@ -1,0 +1,21 @@
+[package]
+version = "1.0.0"
+authors = ["Taylor Spencer <tayspen72@gmail.com>"]
+description = "Peripheral access API for MSP432P401R Microcontrollers"
+keywords = ["no-std", "arm", "cortex-m", "MSP432P401R", "MSP432"]
+license = "MIT OR Apache-2.0"
+name = "msp432p401r_pac"
+repository = "https://github.com/tayspen72/msp432p401r-pac"
+edition = "2018"
+
+[dependencies]
+bare-metal = "1.0.0"
+vcell = "0.1.3"
+cortex-m = "0.7.3"
+
+[dependencies.cortex-m-rt]
+optional = true
+version = "0.6.14"
+
+[features]
+rt = ["cortex-m-rt/device"]
